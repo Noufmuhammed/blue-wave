@@ -61,10 +61,10 @@ Blue Wave is a surfing lesson booking website where visitors can browse availabl
 | **Lesson**   |   |
 | ------------ | - |
 | `_id`        |   |
+| `instructor` |   |
+| `level`      |   |
 | `date`       |   |
 | `time`       |   |
-| `level`      |   |
-| `instructor` |   |
 
 ### Booking
 
