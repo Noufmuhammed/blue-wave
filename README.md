@@ -46,36 +46,33 @@ Blue Wave is a surfing lesson booking website where visitors can browse availabl
 ![Blue Wave ERD](image.png)
 
 ---
-## Database Design
+## Database Models
 
 ### User
 
-| **User**   |   |
-| ---------- | - |
-| `_id`      |   |
-| `username` |   |
-| `password` |   |
+| Field      | Type     | Required |
+| ---------- | -------- | -------- |
+| `_id`      | ObjectId | Yes      |
+| `username` | String   | Yes      |
+| `password` | String   | Yes      |
 
 ### Lesson
 
-| **Lesson**   |   |
-| ------------ | - |
-| `_id`        |   |
-| `instructor` |   |
-| `level`      |   |
-| `date`       |   |
-| `time`       |   |
+| Field        | Type     | Required |
+| ------------ | -------- | -------- |
+| `_id`        | ObjectId | Yes      |
+| `date`       | String   | Yes      |
+| `time`       | String   | Yes      |
+| `level`      | String   | Yes      |
+| `instructor` | String   | Yes      |
 
 ### Booking
 
-| **Booking** |   |
-| ----------- | - |
-| `_id`       |   |
-| `user`      |   |
-| `lesson`    |   |
+| Field    | Type     | Required |
+| -------- | -------- | -------- |
+| `_id`    | ObjectId | Yes      |
+| `user`   | ObjectId | Yes      |
+| `lesson` | ObjectId | Yes      |
 
-### Relationships
-
-One user can have many bookings. One lesson can have many bookings. Each booking belongs to one user and one lesson.
 
 ---
