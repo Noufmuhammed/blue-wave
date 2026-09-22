@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+</head>
+<body>
+    <h1>Surfing Lessons</h1>
+    <% lessons.forEach(lesson => { %>
+
+    <h2><%= lesson.level %> Lesson</h2>
+    <p>Date: <%= lesson.date %></p>
+    <p>Time: <%= lesson.time %></p>
+    <p>Instructor: <%= lesson.instructor %></p>
+
+<% }) %>
+</body>
+</html>
