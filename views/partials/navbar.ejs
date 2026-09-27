@@ -1,44 +1,47 @@
 <nav>
 
-
-<!-- Blue Wave logo -->
-<a href="/">
-    <img src="/blue%20wave%20logo.jpg" alt="Blue Wave logo">
-</a>
-
-<!-- Home link -->
-<a href="/">
-    Home
-</a>
-
-<!-- Lessons link -->
-<a href="/lessons">
-    Lessons
-</a>
-
-<% if (user) { %>
-
-    <!-- Links for logged-in users -->
-    <a href="/bookings">
-        My Bookings
+    <!-- Logo -->
+    <a href="/" class="nav-logo">
+        <img
+            src="/blue%20wave%20logo.jpg"
+            alt="Blue Wave logo"
+        >
     </a>
 
-    <a href="/auth/sign-out">
-        Logout
-    </a>
 
-<% } else { %>
+    <!-- Navigation links -->
+    <div class="nav-links">
 
-    <!-- Links for logged-out users -->
-    <a href="/auth/sign-up">
-        Sign Up
-    </a>
+        <a href="/">
+            Home
+        </a>
 
-    <a href="/auth/sign-in">
-        Login
-    </a>
+        <a href="/lessons">
+            Lessons
+        </a>
 
-<% } %>
+        <% if (user) { %>
 
+            <a href="/bookings">
+                My Bookings
+            </a>
+
+            <a href="/auth/sign-out">
+                Logout
+            </a>
+
+        <% } else { %>
+
+            <a href="/auth/sign-up">
+                Sign Up
+            </a>
+
+            <a href="/auth/sign-in">
+                Login
+            </a>
+
+        <% } %>
+
+    </div>
 
 </nav>

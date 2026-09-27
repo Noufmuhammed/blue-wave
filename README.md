@@ -76,3 +76,25 @@ Blue Wave is a surfing lesson booking website where visitors can browse availabl
 
 
 ---
+## Routes
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| GET | / | Home page |
+| GET | /lessons | View all surfing lessons |
+| GET | /bookings | View my bookings |
+| POST | /bookings | Create a booking |
+| GET | /bookings/:id/edit | Edit booking form |
+| POST | /bookings/:id | Update a booking |
+| POST | /bookings/:id/delete | Cancel a booking |
+| GET | /auth/sign-up | Sign-up page |
+| POST | /auth/sign-up | Create an account |
+| GET | /auth/sign-in | Login page |
+| POST | /auth/sign-in | Log in |
+| GET | /auth/sign-out | Log out |
+
+## Features
+
+## Future Enhancements
+
+## Credits
