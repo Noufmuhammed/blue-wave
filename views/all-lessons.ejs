@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Surfing Lessons</title>
+    <title>Surfing Lessons - Blue Wave</title>
 
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -15,81 +16,114 @@
     <!-- Navigation bar -->
     <%- include('./partials/navbar.ejs') %>
 
-    <h1>Surfing Lessons</h1>
 
-    <p>Choose a lesson and start your surfing adventure!</p>
+    <!-- Lessons heading -->
+    <main class="lessons-page">
 
+        <section class="lessons-header">
 
-    <!-- Show every lesson -->
-    <% lessons.forEach(lesson => { %>
-
-        <!-- Lesson card -->
-        <div class="lesson-card">
-
-            <h2>
-                <%= lesson.level %> Lesson
-            </h2>
-
-            <p>
-                Date: <%= lesson.date %>
+            <p class="hero-subtitle">
+                FIND YOUR WAVE
             </p>
 
-            <p>
-                Time: <%= lesson.time %>
-            </p>
+            <h1>
+                Surfing Lessons
+            </h1>
 
             <p>
-                Instructor: <%= lesson.instructor %>
+                Choose a lesson and start your surfing adventure!
             </p>
 
-            <p>
-                Package: <%= lesson.package %>
-            </p>
-
-            <p>
-                Price: <%= lesson.price %> BHD
-            </p>
+        </section>
 
 
-            <!-- Booking form -->
-            <form action="/bookings" method="POST">
+        <!-- Lesson cards -->
+        <section class="lessons-grid">
 
-                <!-- Sends the lesson ID to bookings.js -->
-                <input
-                    type="hidden"
-                    name="lessonId"
-                    value="<%= lesson._id %>"
-                >
+            <% lessons.forEach(lesson => { %>
 
+                <article class="lesson-card">
 
-                <!-- Optional Water Awareness Class -->
-                <label>
-
-                    <input
-                        type="checkbox"
-                        name="waterAwareness"
-                        value="true"
-                    >
-
-                    Add Water Awareness Class (+5 BHD)
-
-                </label>
-
-                <br><br>
+                    <!-- Lesson level -->
+                    <h2>
+                        <%= lesson.level %> Lesson
+                    </h2>
 
 
-                <!-- Book the lesson -->
-                <button type="submit">
-                    Book This Lesson
-                </button>
+                    <!-- Lesson details -->
+                    <div class="lesson-details">
 
-            </form>
+                        <p>
+                            <strong>Date</strong>
+                            <%= lesson.date %>
+                        </p>
 
-        </div>
+                        <p>
+                            <strong>Time</strong>
+                            <%= lesson.time %>
+                        </p>
 
-    <% }) %>
+                        <p>
+                            <strong>Instructor</strong>
+                            <%= lesson.instructor %>
+                        </p>
 
+                        <p>
+                            <strong>Package</strong>
+                            <%= lesson.package %>
+                        </p>
+
+                    </div>
+
+
+                    <!-- Price -->
+                    <p class="lesson-price">
+                        <%= lesson.price %> BHD
+                    </p>
+
+
+                    <!-- Booking form -->
+                    <form action="/bookings" method="POST">
+
+                        <!-- Sends the lesson ID -->
+                        <input
+                            type="hidden"
+                            name="lessonId"
+                            value="<%= lesson._id %>"
+                        >
+
+
+                        <!-- Water Awareness Class -->
+                        <label class="water-awareness">
+
+                            <input
+                                type="checkbox"
+                                name="waterAwareness"
+                                value="true"
+                            >
+
+                            Add Water Awareness Class
+                            <span>+5 BHD</span>
+
+                        </label>
+
+
+                        <!-- Book button -->
+                        <button type="submit">
+                            Book This Lesson
+                        </button>
+
+                    </form>
+
+                </article>
+
+            <% }) %>
+
+        </section>
+
+    </main>
 
 </body>
 
 </html>
+```
