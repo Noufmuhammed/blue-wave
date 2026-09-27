@@ -6,14 +6,31 @@
     <title>Lessons</title>
 </head>
 <body>
+
     <h1>Surfing Lessons</h1>
+
     <% lessons.forEach(lesson => { %>
 
-    <h2><%= lesson.level %> Lesson</h2>
-    <p>Date: <%= lesson.date %></p>
-    <p>Time: <%= lesson.time %></p>
-    <p>Instructor: <%= lesson.instructor %></p>
+        <div>
+            <h2><%= lesson.level %> Lesson</h2>
 
-<% }) %>
+            <p>Date: <%= lesson.date %></p>
+            <p>Time: <%= lesson.time %></p>
+            <p>Instructor: <%= lesson.instructor %></p>
+
+            <form action="/bookings" method="POST">
+                <input
+                    type="hidden"
+                    name="lessonId"
+                    value="<%= lesson._id %>"
+                >
+
+                <button type="submit">Book This Lesson</button>
+            </form>
+
+        </div>
+
+    <% }) %>
+
 </body>
 </html>

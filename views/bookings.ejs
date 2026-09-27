@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <%- include('./partials/navbar.ejs') %>
+
+    <!-- Page title -->
+    <h1>My Bookings</h1>
+
+    <!-- Message when there are no bookings -->
+    <% if (bookings.length === 0) { %>
+
+        <p>You don't have any bookings yet.</p>
+
+    <% } %>
+
+    <!-- Show each booking -->
+    <% bookings.forEach(booking => { %>
+
+        <div>
+
+            <h2>
+                <%= booking.lesson.level %> Lesson
+            </h2>
+
+            <p>
+                Date: <%= booking.lesson.date %>
+            </p>
+
+            <p>
+                Time: <%= booking.lesson.time %>
+            </p>
+
+            <p>
+                Instructor: <%= booking.lesson.instructor %>
+            </p>
+
+            <!-- Edit this booking -->
+            <a href="/bookings/<%= booking._id %>/edit">
+                Edit Booking
+            </a>
+
+            <!-- Cancel this booking -->
+            <form
+                action="/bookings/<%= booking._id %>/delete"
+                method="POST"
+            >
+                <button type="submit">
+                    Cancel Booking
+                </button>
+            </form>
+
+        </div>
+
+    <% }) %>
+
+</body>
+
+</html>
