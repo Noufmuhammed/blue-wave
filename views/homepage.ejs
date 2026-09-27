@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Blue Wave</title>
+
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
+
+    <!-- Navigation bar -->
+    <%- include('./partials/navbar.ejs') %>
+
+    <!-- Homepage content -->
     <h1>Welcome to Blue Wave 🌊🐋</h1>
-<p>You can't control the waves, but you can learn how to surf!</p>
+
+    <p>
+        You can't control the waves, but you can learn how to surf.
+    </p>
+
+    <!-- Link to surfing lessons -->
+    <a href="/lessons">
+        View Surfing Lessons
+    </a>
+
 </body>
+
 </html>

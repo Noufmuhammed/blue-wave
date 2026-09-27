@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Booking</title>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <%- include('./partials/navbar.ejs') %>
+
+    <h1>Edit Booking</h1>
+
+    <!-- Form for changing the booked lesson -->
+    <form action="/bookings/<%= booking._id %>" method="POST">
+
+        <label for="lessonId">
+            Choose a different lesson:
+        </label>
+
+        <select name="lessonId" id="lessonId">
+
+            <% lessons.forEach(lesson => { %>
+
+                <option
+                    value="<%= lesson._id %>"
+                    <%= booking.lesson._id.toString() === lesson._id.toString() ? "selected" : "" %>
+                >
+                    <%= lesson.date %> -
+                    <%= lesson.time %> -
+                    <%= lesson.level %> -
+                    <%= lesson.instructor %>
+                </option>
+
+            <% }) %>
+
+        </select>
+
+        <button type="submit">
+            Update Booking
+        </button>
+
+    </form>
+
+</body>
+
+</html>

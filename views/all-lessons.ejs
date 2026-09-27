@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lessons</title>
+    <title>Surfing Lessons</title>
 </head>
+
 <body>
+
+    <!-- Navigation bar -->
+    <%- include('./partials/navbar.ejs') %>
 
     <h1>Surfing Lessons</h1>
 
+    <p>Choose a lesson and start your surfing adventure!</p>
+
+
+    <!-- Show every lesson -->
     <% lessons.forEach(lesson => { %>
 
         <div>
-            <h2><%= lesson.level %> Lesson</h2>
 
-            <p>Date: <%= lesson.date %></p>
-            <p>Time: <%= lesson.time %></p>
-            <p>Instructor: <%= lesson.instructor %></p>
+            <h2>
+                <%= lesson.level %> Lesson
+            </h2>
 
+            <p>
+                Date: <%= lesson.date %>
+            </p>
+
+            <p>
+                Time: <%= lesson.time %>
+            </p>
+
+            <p>
+                Instructor: <%= lesson.instructor %>
+            </p>
+
+
+            <!-- Book this lesson -->
             <form action="/bookings" method="POST">
+
+                <!-- Sends the lesson ID to bookings.js -->
                 <input
                     type="hidden"
                     name="lessonId"
                     value="<%= lesson._id %>"
                 >
 
-                <button type="submit">Book This Lesson</button>
+                <button type="submit">
+                    Book This Lesson
+                </button>
+
             </form>
 
         </div>
 
     <% }) %>
 
+
 </body>
+
 </html>
