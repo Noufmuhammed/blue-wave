@@ -1,35 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
-  </head>
 
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Sign Up - Blue Wave</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
     <%- include('../partials/navbar.ejs') %>
 
-    <h1>Create a new account!</h1>
 
-    <form action="/auth/sign-up" method="post">
+    <!-- Sign up form -->
+    <main>
 
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" />
+        <h1>Create Your Blue Wave Account 🌊</h1>
 
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" />
+        <p>
+            Create an account to book your surfing lessons.
+        </p>
 
-      <label for="confirmPassword">Confirm Password:</label>
-      <input
-        type="password"
-        name="confirmPassword"
-        id="confirmPassword"
-      />
 
-      <button type="submit">Sign up</button>
+        <form action="/auth/sign-up" method="POST">
 
-    </form>
+            <!-- Username -->
+            <label for="username">
+                Username
+            </label>
 
-  </body>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                minlength="3"
+                required
+            >
+
+
+            <!-- Password -->
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="6"
+                required
+            >
+
+
+            <!-- Confirm password -->
+            <label for="confirmPassword">
+                Confirm Password
+            </label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                minlength="6"
+                required
+            >
+
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+
+        <p>
+            Already have an account?
+            <a href="/auth/sign-in">Log in</a>
+        </p>
+
+    </main>
+
+</body>
+
 </html>
