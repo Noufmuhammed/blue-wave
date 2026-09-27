@@ -623,7 +623,6 @@ nav {
     margin: 0;
 }
 
-
 /* ==============================
    My Bookings
    ============================== */
@@ -765,7 +764,6 @@ nav {
     margin-bottom: 25px;
 }
 
-
 /* ==============================
    Edit Booking
    ============================== */
@@ -820,7 +818,6 @@ nav {
     background-color: white;
     font-size: 15px;
 }
-
 .edit-addon {
     display: block;
 
@@ -833,7 +830,6 @@ nav {
     border-radius: 10px;
     font-weight: bold;
 }
-
 .edit-addon input {
     margin-right: 6px;
 }
@@ -867,14 +863,12 @@ nav {
     cursor: pointer;
     font-size: 16px;
 }
-
 .cancel-edit {
     display: block;
     text-align: center;
     margin-top: 18px;
     color: #64748b;
 }
-
 
 /* ==============================
    Responsive Design
@@ -889,7 +883,6 @@ nav {
     }
 
 }
-
 
 @media (max-width: 700px) {
 
@@ -915,7 +908,6 @@ nav {
     }
 
 }
-
 
 @media (max-width: 600px) {
 
@@ -944,7 +936,6 @@ nav {
         font-size: 14px;
     }
 
-
     /* Hero */
 
     .hero {
@@ -967,7 +958,6 @@ nav {
         height: 300px;
     }
 
-
     /* About */
 
     .about-text h3 {
@@ -977,7 +967,6 @@ nav {
     .about-text p {
         font-size: 16px;
     }
-
 
     /* Why Blue Wave */
 
@@ -994,11 +983,9 @@ nav {
         gap: 20px;
         padding: 28px 0;
     }
-
     .feature-info h3 {
         font-size: 23px;
     }
-
 
     /* Lessons */
 
@@ -1015,11 +1002,9 @@ nav {
     .booking-info-grid {
         grid-template-columns: 1fr;
     }
-
     .lesson-details {
         grid-template-columns: 1fr 1fr;
     }
-
 
     /* Bookings */
 
@@ -1040,7 +1025,6 @@ nav {
         width: 100%;
     }
 
-
     /* Edit Booking */
 
     .edit-booking-page {
@@ -1054,7 +1038,6 @@ nav {
     .edit-booking-form {
         padding: 25px;
     }
-
 
     /* Authentication */
 
