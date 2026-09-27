@@ -49,3 +49,28 @@ main button {
     margin-top: 10px;
     width: 100%;
 }
+
+/* Lesson Cards */
+
+.lesson-card {
+    background-color: white;
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-card h2 {
+    margin-top: 0;
+}
+
+.lesson-card button {
+    margin-top: 10px;
+}
+/* Logo */
+
+nav img {
+    width: 60px;
+    height: auto;
+}

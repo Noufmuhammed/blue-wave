@@ -15,17 +15,48 @@
     <!-- Navigation bar -->
     <%- include('./partials/navbar.ejs') %>
 
-    <!-- Homepage content -->
-    <h1>Welcome to Blue Wave 🌊🐋</h1>
 
-    <p>
-        You can't control the waves, but you can learn how to surf.
-    </p>
+    <!-- Hero section -->
+    <section class="hero">
 
-    <!-- Link to surfing lessons -->
-    <a href="/lessons">
-        View Surfing Lessons
-    </a>
+        <div class="container">
+
+            <div class="hero-content">
+
+                <p class="hero-subtitle">
+                    SURF • LEARN • RIDE
+                </p>
+
+                <h1 class="hero-title">
+                    Welcome to Blue Wave 🌊
+                </h1>
+
+                <p class="hero-description">
+                    You can't control the waves,
+                    but you can learn how to surf.
+                </p>
+
+                <a href="/lessons" class="btn-primary">
+                    View Surfing Lessons
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Surfing image -->
+        <div class="hero-image-wrapper">
+
+            <img
+                src="/surf.jpg"
+                alt="Surfer riding a wave"
+            >
+
+        </div>
+
+    </section>
+
 
 </body>
 

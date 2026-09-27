@@ -23,7 +23,8 @@
     <!-- Show every lesson -->
     <% lessons.forEach(lesson => { %>
 
-        <div>
+        <!-- Lesson card -->
+        <div class="lesson-card">
 
             <h2>
                 <%= lesson.level %> Lesson
@@ -60,8 +61,10 @@
                     value="<%= lesson._id %>"
                 >
 
+
                 <!-- Optional Water Awareness Class -->
                 <label>
+
                     <input
                         type="checkbox"
                         name="waterAwareness"
@@ -69,10 +72,13 @@
                     >
 
                     Add Water Awareness Class (+5 BHD)
+
                 </label>
 
                 <br><br>
 
+
+                <!-- Book the lesson -->
                 <button type="submit">
                     Book This Lesson
                 </button>
