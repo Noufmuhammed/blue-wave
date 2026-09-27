@@ -5,16 +5,29 @@ const lessonSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+
   time: {
     type: String,
     required: true
   },
+
   level: {
     type: String,
     required: true
   },
+
   instructor: {
     type: String,
+    required: true
+  },
+
+  package: {
+    type: String,
+    required: true
+  },
+
+  price: {
+    type: Number,
     required: true
   }
 })

@@ -1,8 +1,14 @@
 const isLoggedIn = (req, res, next) => {
+
+  // Check if the user is logged in
   if (!req.session.user) {
-    return res.redirect("/auth/signin")
+
+    // Send them to the correct sign-in page
+    return res.redirect("/auth/sign-in")
+
   }
 
+  // Continue if the user is logged in
   next()
 }
 
