@@ -1,31 +1,46 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sign Up - Blue Wave</title>
 
-    <link rel="stylesheet" href="/style.css">
+<title>Sign Up - Blue Wave</title>
+
+<link rel="stylesheet" href="/style.css">
+
+
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
-    <%- include('../partials/navbar.ejs') %>
+```
+<!-- Navigation bar -->
+<%- include('../partials/navbar.ejs') %>
 
 
-    <!-- Sign up form -->
-    <main>
+<!-- Sign up page -->
+<main class="auth-page">
 
-        <h1>Create Your Blue Wave Account 🌊</h1>
+    <section class="auth-card">
 
-        <p>
+        <!-- Heading -->
+        <p class="hero-subtitle">
+            JOIN BLUE WAVE
+        </p>
+
+        <h1>
+            Create Your Account 🌊
+        </h1>
+
+        <p class="auth-description">
             Create an account to book your surfing lessons.
         </p>
 
 
+        <!-- Sign up form -->
         <form action="/auth/sign-up" method="POST">
 
             <!-- Username -->
@@ -70,6 +85,7 @@
             >
 
 
+            <!-- Create account button -->
             <button type="submit">
                 Create Account
             </button>
@@ -77,12 +93,18 @@
         </form>
 
 
-        <p>
+        <!-- Login link -->
+        <p class="auth-footer">
             Already have an account?
-            <a href="/auth/sign-in">Log in</a>
+            <a href="/auth/sign-in">
+                Log in
+            </a>
         </p>
 
-    </main>
+    </section>
+
+</main>
+
 
 </body>
 

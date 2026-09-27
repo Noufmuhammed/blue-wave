@@ -509,23 +509,14 @@ body > p {
 
 .lesson-card button {
     width: 100%;
-
     padding: 14px;
-
     background-color: #0284c7;
-
     color: white;
-
     border: none;
-
     border-radius: 50px;
-
     font-size: 15px;
-
     font-weight: bold;
-
     cursor: pointer;
-
     transition: 0.2s ease;
 }
 
@@ -829,6 +820,317 @@ body > p {
     }
 
 }
+
+/* Edit Booking Page */
+
+.edit-booking-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+
+/* Page heading */
+
+.edit-booking-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.edit-booking-header h1 {
+    color: #0f4c81;
+    font-size: 44px;
+    margin: 10px 0;
+}
+
+.edit-booking-header > p:last-child {
+    color: #64748b;
+    font-size: 18px;
+}
+
+
+/* Edit form */
+
+.edit-booking-form {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e0f2fe;
+
+    box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Label */
+
+.edit-booking-form > label:first-child {
+    display: block;
+
+    color: #0f4c81;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* Lesson select */
+
+.edit-booking-form select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #bae6fd;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #0f172a;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+/* Water Awareness */
+
+.edit-addon {
+    display: block;
+
+    background-color: #f0f9ff;
+
+    color: #0f4c81;
+
+    padding: 14px;
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.edit-addon input {
+    margin-right: 6px;
+}
+
+.edit-addon span {
+    color: #0284c7;
+}
+
+
+/* Total */
+
+.edit-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 25px 0;
+
+    padding: 18px;
+
+    background-color: #e0f2fe;
+
+    border-radius: 12px;
+
+    color: #0f4c81;
+
+    font-size: 18px;
+}
+
+.edit-total strong {
+    color: #0284c7;
+
+    font-size: 24px;
+}
+
+
+/* Update button */
+
+.edit-booking-form .btn-primary {
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+/* Go back link */
+
+.cancel-edit {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #64748b;
+
+    text-decoration: none;
+}
+
+.cancel-edit:hover {
+    color: #0284c7;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .edit-booking-page {
+        padding: 40px 20px;
+    }
+
+    .edit-booking-header h1 {
+        font-size: 36px;
+    }
+
+    .edit-booking-form {
+        padding: 25px;
+    }
+
+}
+.auth-page {
+min-height: 70vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 60px 20px;
+}
+
+/* Login card */
+
+.auth-card {
+width: 100%;
+max-width: 450px;
+background-color: white;
+padding: 40px;
+border-radius: 20px;
+border: 1px solid #e0f2fe;
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+text-align: center;
+}
+
+/* Heading */
+
+.auth-card h1 {
+color: #0f4c81;
+font-size: 34px;
+margin: 10px 0 15px;
+}
+
+/* Description */
+
+.auth-description {
+color: #64748b;
+margin-bottom: 30px;
+}
+
+/* Form */
+
+.auth-card form {
+text-align: left;
+}
+
+/* Labels */
+
+.auth-card label {
+display: block;
+color: #0f4c81;
+font-weight: bold;
+margin-top: 18px;
+margin-bottom: 7px;
+}
+
+/* Inputs */
+
+.auth-card input {
+width: 100%;
+box-sizing: border-box;
+padding: 13px 15px;
+border: 1px solid #bae6fd;
+border-radius: 10px;
+font-size: 16px;
+outline: none;
+}
+
+/* Input focus */
+
+.auth-card input:focus {
+border-color: #0284c7;
+}
+
+/* Login button */
+
+.auth-card button {
+width: 100%;
+margin-top: 25px;
+padding: 14px;
+background-color: #0284c7;
+color: white;
+border: none;
+border-radius: 50px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+/* Button hover */
+
+.auth-card button:hover {
+background-color: #0f4c81;
+}
+
+/* Sign up link */
+
+.auth-footer {
+color: #64748b;
+margin-top: 25px;
+}
+
+.auth-footer a {
+color: #0284c7;
+font-weight: bold;
+text-decoration: none;
+}
+
+.auth-footer a:hover {
+text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+```
+.auth-card {
+    padding: 30px 25px;
+}
+
+.auth-card h1 {
+    font-size: 28px;
+}
+```
+
+}
+
+
+
 
 
 

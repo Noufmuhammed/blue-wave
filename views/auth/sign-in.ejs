@@ -1,3 +1,4 @@
+```html id="1d6lqv"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,58 +17,75 @@
     <%- include('../partials/navbar.ejs') %>
 
 
-    <!-- Login form -->
-    <main>
+    <!-- Login page -->
+    <main class="auth-page">
 
-        <h1>Welcome Back to Blue Wave 🌊</h1>
+        <section class="auth-card">
 
-        <p>
-            Log in to manage your surfing bookings.
-        </p>
+            <!-- Heading -->
+            <p class="hero-subtitle">
+                WELCOME BACK
+            </p>
 
+            <h1>
+                Log In to Blue Wave 🌊
+            </h1>
 
-        <form action="/auth/sign-in" method="POST">
-
-            <!-- Username -->
-            <label for="username">
-                Username
-            </label>
-
-            <input
-                type="text"
-                id="username"
-                name="username"
-                required
-            >
+            <p class="auth-description">
+                Log in to manage your surfing bookings.
+            </p>
 
 
-            <!-- Password -->
-            <label for="password">
-                Password
-            </label>
+            <!-- Login form -->
+            <form action="/auth/sign-in" method="POST">
 
-            <input
-                type="password"
-                id="password"
-                name="password"
-                required
-            >
+                <!-- Username -->
+                <label for="username">
+                    Username
+                </label>
 
-
-            <button type="submit">
-                Log In
-            </button>
-
-        </form>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    required
+                >
 
 
-        <p>
-            Don't have an account?
-            <a href="/auth/sign-up">Create an account</a>
-        </p>
+                <!-- Password -->
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                >
+
+
+                <!-- Login button -->
+                <button type="submit">
+                    Log In
+                </button>
+
+            </form>
+
+
+            <!-- Sign up link -->
+            <p class="auth-footer">
+                Don't have an account?
+                <a href="/auth/sign-up">
+                    Create an account
+                </a>
+            </p>
+
+        </section>
 
     </main>
 
 </body>
 
 </html>
+```
