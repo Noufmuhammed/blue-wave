@@ -505,7 +505,6 @@ body > p {
     font-weight: bold;
 }
 
-
 /* Book button */
 
 .lesson-card button {
@@ -563,5 +562,274 @@ body > p {
     }
 
 }
+
+
+/* My Bookings Page */
+
+.bookings-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+
+/* Page heading */
+
+.bookings-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.bookings-header h1 {
+    color: #0f4c81;
+    font-size: 44px;
+    margin: 10px 0;
+}
+
+.bookings-header > p:last-child {
+    color: #64748b;
+    font-size: 18px;
+}
+
+
+/* Booking grid */
+
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Booking card */
+
+.booking-card {
+    background-color: white;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e0f2fe;
+
+    box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s ease;
+}
+
+
+/* Card hover */
+
+.booking-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 30px -10px rgba(2, 132, 199, 0.18);
+}
+
+
+/* Booking title */
+
+.booking-card h2 {
+    color: #0f4c81;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+/* Booking details */
+
+.booking-details p {
+    color: #64748b;
+
+    margin: 12px 0;
+
+    line-height: 1.5;
+}
+
+.booking-details strong {
+    display: block;
+
+    color: #0f4c81;
+
+    font-size: 14px;
+}
+
+
+/* Lesson price */
+
+.booking-price {
+    color: #64748b;
+
+    margin-top: 20px;
+}
+
+
+/* Water Awareness */
+
+.booking-addon {
+    color: #0284c7;
+
+    font-weight: bold;
+
+    background-color: #f0f9ff;
+
+    padding: 12px;
+
+    border-radius: 10px;
+}
+
+.booking-addon span {
+    margin-left: 5px;
+}
+
+
+/* Total */
+
+.booking-total {
+    color: #0f4c81;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+}
+
+
+/* Booking actions */
+
+.booking-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Edit button */
+
+.btn-secondary {
+    flex: 1;
+
+    text-align: center;
+
+    background-color: #e0f2fe;
+
+    color: #0f4c81;
+
+    padding: 12px 18px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #bae6fd;
+}
+
+
+/* Cancel button */
+
+.btn-danger {
+    background-color: #f87171;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+
+/* Empty bookings */
+
+.empty-bookings {
+    background-color: white;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border: 1px solid #e0f2fe;
+
+    box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.empty-bookings h2 {
+    color: #0f4c81;
+}
+
+.empty-bookings p {
+    color: #64748b;
+
+    margin-bottom: 25px;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .bookings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .bookings-page {
+        padding: 40px 20px;
+    }
+
+    .bookings-header h1 {
+        font-size: 36px;
+    }
+
+    .bookings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+    }
+
+    .btn-secondary,
+    .btn-danger {
+        width: 100%;
+    }
+
+}
+
+
 
 

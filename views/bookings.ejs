@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Bookings</title>
+    <title>My Bookings - Blue Wave</title>
 
     <link rel="stylesheet" href="/style.css">
 </head>
@@ -15,98 +16,157 @@
     <!-- Navigation bar -->
     <%- include('./partials/navbar.ejs') %>
 
-    <h1>My Bookings</h1>
 
-    <!-- Message when there are no bookings -->
-    <% if (bookings.length === 0) { %>
+    <!-- My Bookings page -->
+    <main class="bookings-page">
 
-        <p>You don't have any bookings yet.</p>
+        <!-- Page heading -->
+        <section class="bookings-header">
 
-    <% } %>
-
-
-    <!-- Show each booking -->
-    <% bookings.forEach(booking => { %>
-
-        <div>
-
-            <h2>
-                <%= booking.lesson.level %> Lesson
-            </h2>
-
-            <p>
-                Date: <%= booking.lesson.date %>
+            <p class="hero-subtitle">
+                YOUR SURFING PLANS
             </p>
 
-            <p>
-                Time: <%= booking.lesson.time %>
-            </p>
+            <h1>
+                My Bookings
+            </h1>
 
             <p>
-                Instructor: <%= booking.lesson.instructor %>
+                Manage your upcoming surfing lessons.
             </p>
 
-            <p>
-                Package: <%= booking.lesson.package %>
-            </p>
-
-            <!-- Original lesson price -->
-            <p>
-                Lesson Price: <%= booking.lesson.price %> BHD
-            </p>
+        </section>
 
 
-            <!-- Water Awareness Class -->
-            <% if (booking.waterAwareness) { %>
+        <!-- No bookings message -->
+        <% if (bookings.length === 0) { %>
+
+            <section class="empty-bookings">
+
+                <h2>
+                    No bookings yet 🌊
+                </h2>
 
                 <p>
-                    Water Awareness Class: +5 BHD
+                    Find a lesson and reserve your spot!
                 </p>
 
-                <p>
-                    <strong>
-                        Total: <%= booking.lesson.price + 5 %> BHD
-                    </strong>
-                </p>
+                <a href="/lessons" class="btn-primary">
+                    View Lessons
+                </a>
 
-            <% } else { %>
+            </section>
 
-                <p>
-                    Water Awareness Class: Not Added
-                </p>
-
-                <p>
-                    <strong>
-                        Total: <%= booking.lesson.price %> BHD
-                    </strong>
-                </p>
-
-            <% } %>
+        <% } %>
 
 
-            <!-- Edit this booking -->
-            <a href="/bookings/<%= booking._id %>/edit">
-                Edit Booking
-            </a>
+        <!-- Booking cards -->
+        <section class="bookings-grid">
+
+            <% bookings.forEach(booking => { %>
+
+                <article class="booking-card">
+
+                    <!-- Lesson title -->
+                    <h2>
+                        <%= booking.lesson.level %> Lesson
+                    </h2>
 
 
-            <!-- Cancel this booking -->
-            <form
-                action="/bookings/<%= booking._id %>/delete"
-                method="POST"
-            >
+                    <!-- Booking details -->
+                    <div class="booking-details">
 
-                <button type="submit">
-                    Cancel Booking
-                </button>
+                        <p>
+                            <strong>Date</strong>
+                            <%= booking.lesson.date %>
+                        </p>
 
-            </form>
+                        <p>
+                            <strong>Time</strong>
+                            <%= booking.lesson.time %>
+                        </p>
 
-        </div>
+                        <p>
+                            <strong>Instructor</strong>
+                            <%= booking.lesson.instructor %>
+                        </p>
 
-    <% }) %>
+                        <p>
+                            <strong>Package</strong>
+                            <%= booking.lesson.package %>
+                        </p>
 
+                    </div>
+
+
+                    <!-- Lesson price -->
+                    <p class="booking-price">
+                        Lesson Price:
+                        <%= booking.lesson.price %> BHD
+                    </p>
+
+
+                    <!-- Water Awareness -->
+                    <% if (booking.waterAwareness) { %>
+
+                        <p class="booking-addon">
+                            Water Awareness Class
+                            <span>+5 BHD</span>
+                        </p>
+
+                        <p class="booking-total">
+                            Total:
+                            <%= booking.lesson.price + 5 %> BHD
+                        </p>
+
+                    <% } else { %>
+
+                        <p class="booking-addon">
+                            Water Awareness Class:
+                            Not Added
+                        </p>
+
+                        <p class="booking-total">
+                            Total:
+                            <%= booking.lesson.price %> BHD
+                        </p>
+
+                    <% } %>
+
+
+                    <!-- Booking actions -->
+                    <div class="booking-actions">
+
+                        <a
+                            href="/bookings/<%= booking._id %>/edit"
+                            class="btn-secondary"
+                        >
+                            Edit Booking
+                        </a>
+
+
+                        <form
+                            action="/bookings/<%= booking._id %>/delete"
+                            method="POST"
+                        >
+
+                            <button type="submit" class="btn-danger">
+                                Cancel Booking
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </article>
+
+            <% }) %>
+
+        </section>
+
+    </main>
 
 </body>
 
 </html>
+
