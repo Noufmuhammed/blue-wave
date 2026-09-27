@@ -1,5 +1,26 @@
+/* ==============================
+   General
+   ============================== */
 
-/* Navigation */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f0f9ff;
+    color: #0f172a;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   Navigation
+   ============================== */
 
 nav {
     background-color: #bac2dc;
@@ -12,239 +33,244 @@ nav {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Logo */
-
 nav img {
     width: 60px;
     height: auto;
 }
 
-/* Navigation links */
-
 nav a {
     color: #0f4c81;
-    text-decoration: none;
     font-weight: bold;
 }
-
-/* Navigation link hover */
 
 nav a:hover {
     color: #0284c7;
 }
 
 
-
-/* Forms */
-
-main {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    text-align: center;
-}
-
-main form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    text-align: left;
-}
-
-main label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-main input {
-    width: 100%;
-}
-
-main button {
-    margin-top: 10px;
-    width: 100%;
-}
-
-/* Lesson Cards */
-
-.lesson-card {
-    background-color: white;
-    max-width: 600px;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.lesson-card h2 {
-    margin-top: 0;
-}
-
-.lesson-card button {
-    margin-top: 10px;
-}
-/* Logo */
-
-nav img {
-    width: 60px;
-    height: auto;
-}
-
-.hero {
-background-color: #f0f9ff;
-padding: 70px 40px;
-}
-
-.hero-content {
-max-width: 1100px;
-margin: 0 auto;
-text-align: center;
-}
-
-.hero-subtitle {
-color: #0284c7;
-font-weight: bold;
-letter-spacing: 2px;
-margin-bottom: 15px;
-}
-
-.hero-title {
-color: #0f4c81;
-font-size: 48px;
-margin: 10px 0 20px;
-}
-
-.hero-description {
-color: #64748b;
-font-size: 20px;
-margin-bottom: 30px;
-}
+/* ==============================
+   Buttons
+   ============================== */
 
 .btn-primary {
-display: inline-block;
+    display: inline-block;
 
+    background-color: #0284c7;
+    color: white;
 
-background-color: #0284c7;
-color: white;
+    padding: 14px 28px;
 
-padding: 14px 28px;
-border-radius: 50px;
+    border-radius: 50px;
 
-text-decoration: none;
-font-weight: bold;
+    font-weight: bold;
 
-transition: 0.2s ease;
-
-
+    transition: 0.2s ease;
 }
 
 .btn-primary:hover {
-background-color: #0f4c81;
+    background-color: #0f4c81;
+}
+
+
+/* ==============================
+   Homepage Hero
+   ============================== */
+
+.hero {
+    background-color: #f0f9ff;
+    padding: 70px 40px;
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-subtitle {
+    color: #0284c7;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-title {
+    color: #0f4c81;
+    font-size: 48px;
+    margin: 10px 0 20px;
+}
+
+.hero-description {
+    color: #64748b;
+    font-size: 20px;
+    margin-bottom: 30px;
 }
 
 .hero-image-wrapper {
-max-width: 1100px;
-margin: 50px auto 0;
-overflow: hidden;
-border-radius: 20px;
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    overflow: hidden;
+
+    border-radius: 20px;
 }
 
 .hero-image-wrapper img {
-width: 100%;
-height: 450px;
-object-fit: cover;
-display: block;
-}
-.lesson-card {
-background-color: white;
+    width: 100%;
+    height: 450px;
 
+    object-fit: cover;
 
-max-width: 600px;
-margin: 25px auto;
-padding: 25px;
-
-border-radius: 16px;
-
-box-shadow:
-    0 10px 25px -5px rgba(0, 0, 0, 0.08);
-
-border: 1px solid #e0f2fe;
-
-}
-
-.lesson-card h2 {
-color: #0f4c81;
-margin-top: 0;
-}
-
-.lesson-card p {
-color: #64748b;
-margin: 8px 0;
-}
-
-.lesson-card label {
-color: #0f4c81;
-font-weight: bold;
-}
-
-.lesson-card button {
-background-color: #0284c7;
-color: white;
-
-
-border: none;
-border-radius: 50px;
-
-padding: 12px 24px;
-
-font-weight: bold;
-cursor: pointer;
-
-transition: 0.2s ease;
-
-
-}
-
-.lesson-card button:hover {
-background-color: #0f4c81;
-}
-
-/* Lessons Page */
-
-body {
-    background-color: #f0f9ff;
-    color: #0f172a;
+    display: block;
 }
 
 
-/* Lessons heading */
+/* ==============================
+   About Blue Wave
+   ============================== */
 
-body > h1 {
-    text-align: center;
+.about-section {
+    background-color: white;
+    padding: 100px 30px;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* Section label */
+
+.about-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+.about-label span {
+    width: 35px;
+    height: 3px;
+
+    background-color: #0284c7;
+
+    border-radius: 10px;
+}
+
+.about-label p {
+    margin: 0;
+
+    color: #0284c7;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+
+/* About layout */
+
+.about-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* Large Blue Wave text */
+
+.about-brand {
+    padding: 20px 0;
+}
+
+.about-brand h2 {
+    margin: 0;
+
     color: #0f4c81;
-    font-size: 42px;
-    margin-top: 50px;
-    margin-bottom: 10px;
+
+    font-size: 90px;
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
 }
 
-body > p {
-    text-align: center;
+.about-brand h2:last-of-type {
+    color: #0284c7;
+}
+
+
+/* Wave line */
+
+.about-wave {
+    width: 180px;
+    height: 12px;
+
+    margin-top: 30px;
+
+    border-top: 4px solid #0284c7;
+
+    border-radius: 50%;
+}
+
+
+/* About text */
+
+.about-text {
+    border-left: 3px solid #e0f2fe;
+
+    padding-left: 40px;
+}
+
+.about-text h3 {
+    color: #0f4c81;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.about-text p {
     color: #64748b;
+
     font-size: 18px;
-    margin-bottom: 40px;
+
+    line-height: 1.8;
+
+    margin: 0;
 }
 
 
-/* Lesson cards */
+/* ==============================
+   Forms
+   ============================== */
 
-.lesson-card {
+.auth-page {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+
     background-color: white;
 
-    max-width: 650px;
-    margin: 30px auto;
-    padding: 30px;
+    padding: 40px;
 
     border-radius: 20px;
 
@@ -253,81 +279,60 @@ body > p {
     box-shadow:
         0 10px 25px -5px rgba(0, 0, 0, 0.08);
 
-    transition: 0.2s ease;
+    text-align: center;
 }
 
-
-/* Card hover */
-
-.lesson-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 20px 30px -10px rgba(2, 132, 199, 0.15);
-}
-
-
-/* Lesson title */
-
-.lesson-card h2 {
+.auth-card h1 {
     color: #0f4c81;
 
-    font-size: 26px;
+    font-size: 34px;
 
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin: 10px 0 15px;
 }
 
-
-/* Lesson information */
-
-.lesson-card p {
+.auth-description {
     color: #64748b;
 
-    margin: 10px 0;
-
-    font-size: 16px;
+    margin-bottom: 30px;
 }
 
+.auth-card form {
+    text-align: left;
+}
 
-/* Price */
+.auth-card label {
+    display: block;
 
-.lesson-card p:last-of-type {
-    color: #0284c7;
-
-    font-size: 20px;
+    color: #0f4c81;
 
     font-weight: bold;
 
-    margin-top: 20px;
+    margin-top: 18px;
+    margin-bottom: 7px;
 }
 
+.auth-card input {
+    width: 100%;
 
-/* Water Awareness option */
+    padding: 13px 15px;
 
-.lesson-card label {
-    display: block;
-
-    margin-top: 20px;
-
-    padding: 12px;
-
-    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
 
     border-radius: 10px;
 
-    color: #0f4c81;
+    font-size: 16px;
 
-    font-weight: bold;
+    outline: none;
 }
 
+.auth-card input:focus {
+    border-color: #0284c7;
+}
 
-/* Book button */
-
-.lesson-card button {
+.auth-card button {
     width: 100%;
 
-    margin-top: 20px;
+    margin-top: 25px;
 
     padding: 14px;
 
@@ -348,44 +353,61 @@ body > p {
     transition: 0.2s ease;
 }
 
-
-/* Button hover */
-
-.lesson-card button:hover {
+.auth-card button:hover {
     background-color: #0f4c81;
-
-    transform: translateY(-2px);
 }
 
-/* Lessons Page */
+.auth-footer {
+    color: #64748b;
+
+    margin-top: 25px;
+}
+
+.auth-footer a {
+    color: #0284c7;
+
+    font-weight: bold;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   Lessons Page
+   ============================== */
 
 .lessons-page {
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 60px 30px;
 }
 
-
-/* Lessons heading */
-
 .lessons-header {
     text-align: center;
+
     margin-bottom: 45px;
 }
 
 .lessons-header h1 {
     color: #0f4c81;
+
     font-size: 44px;
+
     margin: 10px 0;
 }
 
 .lessons-header > p:last-child {
     color: #64748b;
+
     font-size: 18px;
 }
 
 
-/* Three-column layout */
+/* Lesson grid */
 
 .lessons-grid {
     display: grid;
@@ -413,11 +435,9 @@ body > p {
     transition: 0.2s ease;
 
     display: flex;
+
     flex-direction: column;
 }
-
-
-/* Card hover */
 
 .lesson-card:hover {
     transform: translateY(-6px);
@@ -426,15 +446,13 @@ body > p {
         0 20px 30px -10px rgba(2, 132, 199, 0.18);
 }
 
-
-/* Lesson title */
-
 .lesson-card h2 {
     color: #0f4c81;
 
     font-size: 25px;
 
     margin-top: 0;
+
     margin-bottom: 20px;
 }
 
@@ -505,18 +523,28 @@ body > p {
     font-weight: bold;
 }
 
+
 /* Book button */
 
 .lesson-card button {
     width: 100%;
+
     padding: 14px;
+
     background-color: #0284c7;
+
     color: white;
+
     border: none;
+
     border-radius: 50px;
+
     font-size: 15px;
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.2s ease;
 }
 
@@ -525,60 +553,35 @@ body > p {
 }
 
 
-/* Tablet */
-
-@media (max-width: 900px) {
-
-    .lessons-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .lessons-page {
-        padding: 40px 20px;
-    }
-
-    .lessons-header h1 {
-        font-size: 36px;
-    }
-
-    .lessons-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* My Bookings Page */
+/* ==============================
+   My Bookings
+   ============================== */
 
 .bookings-page {
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 60px 30px;
 }
 
-
-/* Page heading */
-
 .bookings-header {
     text-align: center;
+
     margin-bottom: 45px;
 }
 
 .bookings-header h1 {
     color: #0f4c81;
+
     font-size: 44px;
+
     margin: 10px 0;
 }
 
 .bookings-header > p:last-child {
     color: #64748b;
+
     font-size: 18px;
 }
 
@@ -587,7 +590,9 @@ body > p {
 
 .bookings-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 25px;
 }
 
@@ -609,9 +614,6 @@ body > p {
     transition: 0.2s ease;
 }
 
-
-/* Card hover */
-
 .booking-card:hover {
     transform: translateY(-6px);
 
@@ -619,13 +621,11 @@ body > p {
         0 20px 30px -10px rgba(2, 132, 199, 0.18);
 }
 
-
-/* Booking title */
-
 .booking-card h2 {
     color: #0f4c81;
 
     margin-top: 0;
+
     margin-bottom: 20px;
 }
 
@@ -649,7 +649,7 @@ body > p {
 }
 
 
-/* Lesson price */
+/* Price */
 
 .booking-price {
     color: #64748b;
@@ -702,9 +702,6 @@ body > p {
     flex-wrap: wrap;
 }
 
-
-/* Edit button */
-
 .btn-secondary {
     flex: 1;
 
@@ -718,17 +715,12 @@ body > p {
 
     border-radius: 50px;
 
-    text-decoration: none;
-
     font-weight: bold;
 }
 
 .btn-secondary:hover {
     background-color: #bae6fd;
 }
-
-
-/* Cancel button */
 
 .btn-danger {
     background-color: #f87171;
@@ -783,73 +775,37 @@ body > p {
 }
 
 
-/* Tablet */
-
-@media (max-width: 900px) {
-
-    .bookings-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-    .bookings-page {
-        padding: 40px 20px;
-    }
-
-    .bookings-header h1 {
-        font-size: 36px;
-    }
-
-    .bookings-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .booking-actions {
-        flex-direction: column;
-    }
-
-    .btn-secondary,
-    .btn-danger {
-        width: 100%;
-    }
-
-}
-
-/* Edit Booking Page */
+/* ==============================
+   Edit Booking
+   ============================== */
 
 .edit-booking-page {
     max-width: 700px;
+
     margin: 0 auto;
+
     padding: 60px 30px;
 }
 
-
-/* Page heading */
-
 .edit-booking-header {
     text-align: center;
+
     margin-bottom: 40px;
 }
 
 .edit-booking-header h1 {
     color: #0f4c81;
+
     font-size: 44px;
+
     margin: 10px 0;
 }
 
 .edit-booking-header > p:last-child {
     color: #64748b;
+
     font-size: 18px;
 }
-
-
-/* Edit form */
 
 .edit-booking-form {
     background-color: white;
@@ -864,9 +820,6 @@ body > p {
         0 10px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
-
-/* Label */
-
 .edit-booking-form > label:first-child {
     display: block;
 
@@ -876,9 +829,6 @@ body > p {
 
     margin-bottom: 10px;
 }
-
-
-/* Lesson select */
 
 .edit-booking-form select {
     width: 100%;
@@ -897,9 +847,6 @@ body > p {
 
     cursor: pointer;
 }
-
-
-/* Water Awareness */
 
 .edit-addon {
     display: block;
@@ -924,9 +871,6 @@ body > p {
 .edit-addon span {
     color: #0284c7;
 }
-
-
-/* Total */
 
 .edit-total {
     display: flex;
@@ -954,9 +898,6 @@ body > p {
     font-size: 24px;
 }
 
-
-/* Update button */
-
 .edit-booking-form .btn-primary {
     width: 100%;
 
@@ -967,9 +908,6 @@ body > p {
     font-size: 16px;
 }
 
-
-/* Go back link */
-
 .cancel-edit {
     display: block;
 
@@ -978,8 +916,6 @@ body > p {
     margin-top: 18px;
 
     color: #64748b;
-
-    text-decoration: none;
 }
 
 .cancel-edit:hover {
@@ -987,9 +923,136 @@ body > p {
 }
 
 
-/* Mobile */
+/* ==============================
+   Responsive Design
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .lessons-grid,
+    .bookings-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    /* About */
+
+    .about-section {
+        padding: 70px 20px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-brand h2 {
+        font-size: 65px;
+    }
+
+    .about-text {
+        border-left: none;
+
+        border-top: 3px solid #e0f2fe;
+
+        padding-left: 0;
+
+        padding-top: 30px;
+    }
+
+    .about-text h3 {
+        font-size: 26px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+}
+
 
 @media (max-width: 600px) {
+
+    /* Navigation */
+
+    nav {
+        padding: 15px 20px;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    nav img {
+        width: 50px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 35px;
+    }
+
+    .hero-image-wrapper img {
+        height: 300px;
+    }
+
+
+    /* Lessons */
+
+    .lessons-page {
+        padding: 40px 20px;
+    }
+
+    .lessons-header h1 {
+        font-size: 36px;
+    }
+
+    .lessons-grid,
+    .bookings-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Bookings */
+
+    .bookings-page {
+        padding: 40px 20px;
+    }
+
+    .bookings-header h1 {
+        font-size: 36px;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+    }
+
+    .btn-secondary,
+    .btn-danger {
+        width: 100%;
+    }
+
+
+    /* Edit booking */
 
     .edit-booking-page {
         padding: 40px 20px;
@@ -1003,135 +1066,15 @@ body > p {
         padding: 25px;
     }
 
-}
-.auth-page {
-min-height: 70vh;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 60px 20px;
-}
 
-/* Login card */
+    /* Authentication */
 
-.auth-card {
-width: 100%;
-max-width: 450px;
-background-color: white;
-padding: 40px;
-border-radius: 20px;
-border: 1px solid #e0f2fe;
-box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-text-align: center;
-}
+    .auth-card {
+        padding: 30px 25px;
+    }
 
-/* Heading */
-
-.auth-card h1 {
-color: #0f4c81;
-font-size: 34px;
-margin: 10px 0 15px;
-}
-
-/* Description */
-
-.auth-description {
-color: #64748b;
-margin-bottom: 30px;
-}
-
-/* Form */
-
-.auth-card form {
-text-align: left;
-}
-
-/* Labels */
-
-.auth-card label {
-display: block;
-color: #0f4c81;
-font-weight: bold;
-margin-top: 18px;
-margin-bottom: 7px;
-}
-
-/* Inputs */
-
-.auth-card input {
-width: 100%;
-box-sizing: border-box;
-padding: 13px 15px;
-border: 1px solid #bae6fd;
-border-radius: 10px;
-font-size: 16px;
-outline: none;
-}
-
-/* Input focus */
-
-.auth-card input:focus {
-border-color: #0284c7;
-}
-
-/* Login button */
-
-.auth-card button {
-width: 100%;
-margin-top: 25px;
-padding: 14px;
-background-color: #0284c7;
-color: white;
-border: none;
-border-radius: 50px;
-font-size: 16px;
-font-weight: bold;
-cursor: pointer;
-transition: 0.2s ease;
-}
-
-/* Button hover */
-
-.auth-card button:hover {
-background-color: #0f4c81;
-}
-
-/* Sign up link */
-
-.auth-footer {
-color: #64748b;
-margin-top: 25px;
-}
-
-.auth-footer a {
-color: #0284c7;
-font-weight: bold;
-text-decoration: none;
-}
-
-.auth-footer a:hover {
-text-decoration: underline;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
-
-```
-.auth-card {
-    padding: 30px 25px;
-}
-
-.auth-card h1 {
-    font-size: 28px;
-}
-```
+    .auth-card h1 {
+        font-size: 28px;
+    }
 
 }
-
-
-
-
-
-
-
