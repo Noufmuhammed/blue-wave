@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Edit Booking</title>
+
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -14,9 +17,10 @@
 
     <h1>Edit Booking</h1>
 
-    <!-- Form for changing the booked lesson -->
+    <!-- Form for changing the booking -->
     <form action="/bookings/<%= booking._id %>" method="POST">
 
+        <!-- Choose a different lesson -->
         <label for="lessonId">
             Choose a different lesson:
         </label>
@@ -27,23 +31,94 @@
 
                 <option
                     value="<%= lesson._id %>"
+                    data-price="<%= lesson.price %>"
                     <%= booking.lesson._id.toString() === lesson._id.toString() ? "selected" : "" %>
                 >
                     <%= lesson.date %> -
                     <%= lesson.time %> -
                     <%= lesson.level %> -
-                    <%= lesson.instructor %>
+                    <%= lesson.instructor %> -
+                    <%= lesson.package %> -
+                    <%= lesson.price %> BHD
                 </option>
 
             <% }) %>
 
         </select>
 
+        <br><br>
+
+        <!-- Optional Water Awareness Class -->
+        <label>
+
+            <input
+                type="checkbox"
+                name="waterAwareness"
+                value="true"
+                id="waterAwareness"
+                <%= booking.waterAwareness ? "checked" : "" %>
+            >
+
+            Add Water Awareness Class (+5 BHD)
+
+        </label>
+
+        <br><br>
+
+        <!-- Show the total price -->
+        <p>
+            Total:
+            <strong>
+                <span id="totalPrice">
+                    <%= booking.lesson.price + (booking.waterAwareness ? 5 : 0) %>
+                </span>
+                BHD
+            </strong>
+        </p>
+
+        <!-- Save the changes -->
         <button type="submit">
             Update Booking
         </button>
 
     </form>
+
+
+    <script>
+
+        // Get the elements we need
+        const lessonSelect = document.querySelector("#lessonId")
+        const waterAwareness = document.querySelector("#waterAwareness")
+        const totalPrice = document.querySelector("#totalPrice")
+
+
+        // Update the total price
+        function updateTotal() {
+
+            // Get the selected lesson price
+            const selectedLesson =
+                lessonSelect.options[lessonSelect.selectedIndex]
+
+            const lessonPrice =
+                Number(selectedLesson.dataset.price)
+
+            // Add 5 BHD if Water Awareness is selected
+            const total =
+                lessonPrice + (waterAwareness.checked ? 5 : 0)
+
+            // Show the new total
+            totalPrice.textContent = total
+
+        }
+
+
+        // Update when the lesson changes
+        lessonSelect.addEventListener("change", updateTotal)
+
+        // Update when Water Awareness is checked/unchecked
+        waterAwareness.addEventListener("change", updateTotal)
+
+    </script>
 
 </body>
 

@@ -50,7 +50,7 @@
             </p>
 
 
-            <!-- Book this lesson -->
+            <!-- Booking form -->
             <form action="/bookings" method="POST">
 
                 <!-- Sends the lesson ID to bookings.js -->
@@ -59,6 +59,19 @@
                     name="lessonId"
                     value="<%= lesson._id %>"
                 >
+
+                <!-- Optional Water Awareness Class -->
+                <label>
+                    <input
+                        type="checkbox"
+                        name="waterAwareness"
+                        value="true"
+                    >
+
+                    Add Water Awareness Class (+5 BHD)
+                </label>
+
+                <br><br>
 
                 <button type="submit">
                     Book This Lesson

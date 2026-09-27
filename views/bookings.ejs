@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>My Bookings</title>
+
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -12,7 +15,6 @@
     <!-- Navigation bar -->
     <%- include('./partials/navbar.ejs') %>
 
-    <!-- Page title -->
     <h1>My Bookings</h1>
 
     <!-- Message when there are no bookings -->
@@ -21,6 +23,7 @@
         <p>You don't have any bookings yet.</p>
 
     <% } %>
+
 
     <!-- Show each booking -->
     <% bookings.forEach(booking => { %>
@@ -43,24 +46,66 @@
                 Instructor: <%= booking.lesson.instructor %>
             </p>
 
+            <p>
+                Package: <%= booking.lesson.package %>
+            </p>
+
+            <!-- Original lesson price -->
+            <p>
+                Lesson Price: <%= booking.lesson.price %> BHD
+            </p>
+
+
+            <!-- Water Awareness Class -->
+            <% if (booking.waterAwareness) { %>
+
+                <p>
+                    Water Awareness Class: +5 BHD
+                </p>
+
+                <p>
+                    <strong>
+                        Total: <%= booking.lesson.price + 5 %> BHD
+                    </strong>
+                </p>
+
+            <% } else { %>
+
+                <p>
+                    Water Awareness Class: Not Added
+                </p>
+
+                <p>
+                    <strong>
+                        Total: <%= booking.lesson.price %> BHD
+                    </strong>
+                </p>
+
+            <% } %>
+
+
             <!-- Edit this booking -->
             <a href="/bookings/<%= booking._id %>/edit">
                 Edit Booking
             </a>
+
 
             <!-- Cancel this booking -->
             <form
                 action="/bookings/<%= booking._id %>/delete"
                 method="POST"
             >
+
                 <button type="submit">
                     Cancel Booking
                 </button>
+
             </form>
 
         </div>
 
     <% }) %>
+
 
 </body>
 
