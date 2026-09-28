@@ -2,10 +2,11 @@ require("dotenv").config() // loads variables from .env
 
 const connectDB = require("./db") // connects to MongoDB
 
-const lessonsRouter = require("./routes/lessons") // lessons routes
-const bookingsRouter = require("./routes/bookings") // bookings routes
-const authRouter = require("./routes/auth") // authentication routes
-
+const lessonsRouter = require("./routes/lessons") 
+const bookingsRouter = require("./routes/bookings")
+const authRouter = require("./routes/auth") 
+const helpRouter = require("./routes/help")
+const contactRouter = require("./routes/contact")
 connectDB() // connects to MongoDB
 
 const express = require("express") // imports Express
@@ -40,8 +41,8 @@ app.use((req, res, next) => {
 app.use("/lessons", lessonsRouter)
 app.use("/bookings", bookingsRouter)
 app.use("/auth", authRouter)
-
-
+app.use("/help", helpRouter)
+app.use("/contact", contactRouter)
 // EJS
 app.set("view engine", "ejs")
 
