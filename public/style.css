@@ -1,15 +1,23 @@
-/* ==============================
-   General
-   ============================== */
+/* =========================================================
+   BLUE WAVE
+   Ocean-inspired design
+========================================================= */
+
+
+/* General */
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background-color: #f0f9ff;
-    color: #0f172a;
+    background-color: #f7fbfc;
+    color: #102a43;
     font-family: Arial, sans-serif;
 }
 
@@ -18,20 +26,18 @@ a {
 }
 
 
-/* ==============================
+/* =========================================================
    Navigation
-   ============================== */
+========================================================= */
 
 nav {
-    background-color: #bac2dc;
-    padding: 12px 40px;
-
+    background-color: #073b4c;
+    padding: 14px 40px;
     display: flex;
     align-items: center;
-
     position: relative;
-
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(7, 59, 76, 0.15);
+    z-index: 10;
 }
 
 .nav-logo {
@@ -42,57 +48,58 @@ nav {
 .nav-logo img {
     width: 65px;
     display: block;
+    border-radius: 50%;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
     gap: 28px;
-
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .nav-links a {
-    color: #0f4c81;
+    color: #e0f7fa;
     font-weight: bold;
     font-size: 15px;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #0284c7;
+    color: #5eead4;
 }
 
 
-/* ==============================
+/* =========================================================
    Buttons
-   ============================== */
+========================================================= */
 
 .btn-primary {
     display: inline-block;
-
-    background-color: #0284c7;
+    background-color: #14b8a6;
     color: white;
-
     padding: 14px 28px;
     border-radius: 50px;
-
     font-weight: bold;
+    transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0f4c81;
+    background-color: #0f766e;
+    transform: translateY(-2px);
 }
 
 
-/* ==============================
+/* =========================================================
    Homepage Hero
-   ============================== */
+========================================================= */
 
 .hero {
-    background-color: #f0f9ff;
-    padding: 70px 40px;
+    background-color: #075985;
+    padding: 80px 40px 0;
+    position: relative;
 }
 
 .hero-content {
@@ -102,46 +109,70 @@ nav {
 }
 
 .hero-subtitle {
-    color: #0284c7;
+    color: #5eead4;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 15px;
+    font-size: 13px;
 }
 
 .hero-title {
-    color: #0f4c81;
-    font-size: 48px;
+    color: white;
+    font-size: 52px;
     margin: 10px 0 20px;
+    line-height: 1.1;
 }
 
 .hero-description {
-    color: #64748b;
+    color: #d9f7f5;
     font-size: 20px;
+    line-height: 1.6;
     margin-bottom: 30px;
 }
 
+
+/* Hero Image */
+
 .hero-image-wrapper {
     max-width: 1100px;
-    margin: 50px auto 0;
+    height: 450px;
+    margin: 55px auto 0;
+    position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.15);
 }
 
 .hero-image-wrapper img {
     width: 100%;
-    height: 450px;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
 
-/* ==============================
+/* Ocean wave */
+
+.hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: block;
+    fill: white;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* =========================================================
    About Blue Wave
-   ============================== */
+========================================================= */
 
 .about-section {
     background-color: white;
-    padding: 100px 30px;
+    padding: 110px 30px;
 }
 
 .about-content {
@@ -153,22 +184,22 @@ nav {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .about-label span {
-    width: 35px;
-    height: 3px;
-    background-color: #0284c7;
+    width: 40px;
+    height: 4px;
+    background-color: #14b8a6;
     border-radius: 10px;
 }
 
 .about-label p {
     margin: 0;
-    color: #0284c7;
+    color: #0f766e;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .about-layout {
@@ -178,59 +209,79 @@ nav {
     align-items: center;
 }
 
+
+/* Big BLUE WAVE text */
+
 .about-brand h2 {
     margin: 0;
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 90px;
     line-height: 0.9;
-    letter-spacing: -4px;
+    letter-spacing: -5px;
 }
 
 .about-brand h2:last-of-type {
-    color: #0284c7;
+    color: #0ea5a4;
 }
 
 .about-wave {
     width: 180px;
     height: 12px;
     margin-top: 30px;
-    border-top: 4px solid #0284c7;
+    border-top: 5px solid #14b8a6;
     border-radius: 50%;
 }
 
+
+/* About text */
+
 .about-text {
-    border-left: 3px solid #e0f2fe;
+    border-left: 4px solid #ccfbf1;
     padding-left: 40px;
 }
 
 .about-text h3 {
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 30px;
     line-height: 1.3;
     margin: 0 0 20px;
 }
 
 .about-text p {
-    color: #64748b;
+    color: #526777;
     font-size: 18px;
     line-height: 1.8;
     margin: 0;
 }
 
 
-/* ==============================
+/* =========================================================
    Why Blue Wave
-   ============================== */
+========================================================= */
 
 .why-section {
-    background-color: #0f4c81;
+    background-color: #073b4c;
     color: white;
-    padding: 100px 30px;
+    padding: 110px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.why-section::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid rgba(94, 234, 212, 0.2);
+    border-radius: 50%;
+    top: -150px;
+    right: -100px;
 }
 
 .why-content {
     max-width: 1100px;
     margin: 0 auto;
+    position: relative;
 }
 
 .why-header {
@@ -239,7 +290,7 @@ nav {
 }
 
 .why-header .hero-subtitle {
-    color: #bae6fd;
+    color: #5eead4;
 }
 
 .why-header h2 {
@@ -249,25 +300,19 @@ nav {
 }
 
 .feature-list {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .feature-item {
     display: grid;
     grid-template-columns: 100px 1fr;
     gap: 40px;
-
     padding: 35px 0;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.feature-item:hover {
-    padding-left: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .feature-number {
-    color: #7dd3fc;
+    color: #5eead4;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -281,49 +326,43 @@ nav {
 .feature-info p {
     max-width: 600px;
     margin: 0;
-    color: #dbeafe;
+    color: #c9e9ed;
     line-height: 1.7;
 }
 
 
-/* ==============================
+/* =========================================================
    Authentication
-   ============================== */
+========================================================= */
 
 .auth-page {
     min-height: 70vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    padding: 60px 20px;
+    padding: 70px 20px;
+    background-color: #eef8fa;
 }
 
 .auth-card {
     width: 100%;
     max-width: 450px;
-
     background-color: white;
-
-    padding: 40px;
-    border-radius: 20px;
-
-    border: 1px solid #e0f2fe;
-
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-
+    padding: 45px;
+    border-radius: 24px;
+    border: 1px solid #d6eef0;
+    box-shadow: 0 20px 45px rgba(7, 59, 76, 0.12);
     text-align: center;
 }
 
 .auth-card h1 {
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 34px;
     margin: 10px 0 15px;
 }
 
 .auth-description {
-    color: #64748b;
+    color: #607d8b;
     margin-bottom: 30px;
 }
 
@@ -333,7 +372,7 @@ nav {
 
 .auth-card label {
     display: block;
-    color: #0f4c81;
+    color: #073b4c;
     font-weight: bold;
     margin: 18px 0 7px;
 }
@@ -341,75 +380,71 @@ nav {
 .auth-card input {
     width: 100%;
     padding: 13px 15px;
-
-    border: 1px solid #bae6fd;
+    border: 1px solid #a7dfe2;
     border-radius: 10px;
-
     font-size: 16px;
 }
 
 .auth-card input:focus {
-    border-color: #0284c7;
+    border-color: #14b8a6;
     outline: none;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.12);
 }
 
 .auth-card button {
     width: 100%;
-
     margin-top: 25px;
     padding: 14px;
-
-    background-color: #0284c7;
+    background-color: #14b8a6;
     color: white;
-
     border: none;
     border-radius: 50px;
-
     font-size: 16px;
     font-weight: bold;
-
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .auth-card button:hover {
-    background-color: #0f4c81;
+    background-color: #0f766e;
+    transform: translateY(-2px);
 }
 
 .auth-footer {
-    color: #64748b;
+    color: #607d8b;
     margin-top: 25px;
 }
 
 .auth-footer a {
-    color: #0284c7;
+    color: #0f766e;
     font-weight: bold;
 }
 
 
-/* ==============================
+/* =========================================================
    Lessons
-   ============================== */
+========================================================= */
 
 .lessons-page {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 70px 30px;
+    padding: 80px 30px;
 }
 
 .lessons-header {
     max-width: 700px;
     text-align: center;
-    margin: 0 auto 55px;
+    margin: 0 auto 60px;
 }
 
 .lessons-header h1 {
-    color: #0f4c81;
-    font-size: 46px;
+    color: #073b4c;
+    font-size: 48px;
     margin: 10px 0 15px;
 }
 
 .lessons-header > p:last-child {
-    color: #64748b;
+    color: #607d8b;
     font-size: 18px;
     line-height: 1.6;
 }
@@ -422,19 +457,18 @@ nav {
 
 .lesson-card {
     background-color: white;
-
     padding: 30px;
-    border-radius: 20px;
-    border: 1px solid #e0f2fe;
-
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-
+    border-radius: 22px;
+    border: 1px solid #d6eef0;
+    box-shadow: 0 12px 30px rgba(7, 59, 76, 0.08);
     display: flex;
     flex-direction: column;
+    transition: all 0.25s ease;
 }
 
 .lesson-card:hover {
     transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(7, 59, 76, 0.14);
 }
 
 .lesson-level {
@@ -442,17 +476,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-
     margin-bottom: 18px;
 }
 
 .lesson-level span:first-child {
-    color: #0284c7;
-    background-color: #e0f2fe;
-
+    color: #0f766e;
+    background-color: #ccfbf1;
     padding: 6px 12px;
     border-radius: 50px;
-
     font-size: 13px;
     font-weight: bold;
 }
@@ -465,7 +496,7 @@ nav {
 }
 
 .lesson-card h2 {
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 28px;
     margin: 0 0 25px;
 }
@@ -474,28 +505,25 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
-
     flex: 1;
 }
 
 .lesson-detail {
-    border-top: 1px solid #e0f2fe;
+    border-top: 1px solid #d6eef0;
     padding-top: 12px;
 }
 
 .lesson-detail span {
     display: block;
     color: #94a3b8;
-
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
-
     margin-bottom: 5px;
 }
 
 .lesson-detail strong {
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 14px;
 }
 
@@ -503,22 +531,20 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin: 30px 0 20px;
     padding-top: 20px;
-
-    border-top: 2px solid #e0f2fe;
+    border-top: 2px solid #d6eef0;
 }
 
 .lesson-price span {
-    color: #64748b;
+    color: #607d8b;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 .lesson-price strong {
-    color: #0284c7;
+    color: #0f766e;
     font-size: 26px;
 }
 
@@ -526,20 +552,17 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
-
-    background-color: #f0f9ff;
-
+    background-color: #eefcfb;
     padding: 13px;
     margin-bottom: 15px;
-
     border-radius: 10px;
-
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 13px;
 }
 
 .water-awareness input {
     margin: 0;
+    accent-color: #14b8a6;
 }
 
 .water-awareness span {
@@ -547,35 +570,31 @@ nav {
 }
 
 .water-awareness strong {
-    color: #0284c7;
+    color: #0f766e;
     white-space: nowrap;
 }
 
 .lesson-card button {
     width: 100%;
-
     padding: 14px;
-
-    background-color: #0284c7;
+    background-color: #14b8a6;
     color: white;
-
     border: none;
     border-radius: 50px;
-
     font-size: 15px;
     font-weight: bold;
-
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .lesson-card button:hover {
-    background-color: #0f4c81;
+    background-color: #0f766e;
 }
 
 
-/* ==============================
+/* =========================================================
    Before You Book
-   ============================== */
+========================================================= */
 
 .before-booking {
     margin-top: 100px;
@@ -588,7 +607,7 @@ nav {
 }
 
 .before-booking-header h2 {
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 36px;
     margin: 10px 0;
 }
@@ -602,50 +621,55 @@ nav {
 .booking-info {
     background-color: white;
     padding: 28px;
+    border: 1px solid #d6eef0;
+    border-radius: 20px;
+    transition: transform 0.2s ease;
+}
 
-    border: 1px solid #e0f2fe;
-    border-radius: 18px;
+.booking-info:hover {
+    transform: translateY(-4px);
 }
 
 .booking-info-number {
-    color: #0284c7;
+    color: #0f766e;
     font-weight: bold;
 }
 
 .booking-info h3 {
-    color: #0f4c81;
+    color: #073b4c;
     margin: 15px 0 10px;
 }
 
 .booking-info p {
-    color: #64748b;
+    color: #607d8b;
     line-height: 1.6;
     margin: 0;
 }
 
-/* ==============================
+
+/* =========================================================
    My Bookings
-   ============================== */
+========================================================= */
 
 .bookings-page {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 70px 30px;
 }
 
 .bookings-header {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .bookings-header h1 {
-    color: #0f4c81;
-    font-size: 44px;
+    color: #073b4c;
+    font-size: 46px;
     margin: 10px 0;
 }
 
 .bookings-header > p:last-child {
-    color: #64748b;
+    color: #607d8b;
     font-size: 18px;
 }
 
@@ -657,47 +681,43 @@ nav {
 
 .booking-card {
     background-color: white;
-
     padding: 28px;
-    border-radius: 20px;
-    border: 1px solid #e0f2fe;
-
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    border-radius: 22px;
+    border: 1px solid #d6eef0;
+    box-shadow: 0 12px 30px rgba(7, 59, 76, 0.08);
 }
 
 .booking-card h2 {
-    color: #0f4c81;
+    color: #073b4c;
     margin: 0 0 20px;
 }
 
 .booking-details p {
-    color: #64748b;
+    color: #607d8b;
     margin: 12px 0;
 }
 
 .booking-details strong {
     display: block;
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 14px;
 }
 
 .booking-price {
-    color: #64748b;
+    color: #607d8b;
     margin-top: 20px;
 }
 
 .booking-addon {
-    color: #0284c7;
+    color: #0f766e;
     font-weight: bold;
-
-    background-color: #f0f9ff;
-
+    background-color: #eefcfb;
     padding: 12px;
     border-radius: 10px;
 }
 
 .booking-total {
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 22px;
     font-weight: bold;
 }
@@ -710,68 +730,61 @@ nav {
 
 .btn-secondary {
     flex: 1;
-
     text-align: center;
-
-    background-color: #e0f2fe;
-    color: #0f4c81;
-
+    background-color: #ccfbf1;
+    color: #073b4c;
     padding: 12px 18px;
     border-radius: 50px;
-
     font-weight: bold;
 }
 
-.btn-danger {
-    background-color: #f87171;
-    color: white;
+.btn-secondary:hover {
+    background-color: #99f6e4;
+}
 
+.btn-danger {
+    background-color: #ef6c68;
+    color: white;
     border: none;
     border-radius: 50px;
-
     padding: 12px 18px;
-
     font-weight: bold;
     cursor: pointer;
 }
 
 .btn-danger:hover {
-    background-color: #dc2626;
+    background-color: #d94c48;
 }
 
 .empty-bookings {
     background-color: white;
-
     max-width: 600px;
     margin: 0 auto;
-
     padding: 50px 30px;
-
     text-align: center;
-
-    border-radius: 20px;
-    border: 1px solid #e0f2fe;
-
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    border-radius: 22px;
+    border: 1px solid #d6eef0;
+    box-shadow: 0 12px 30px rgba(7, 59, 76, 0.08);
 }
 
 .empty-bookings h2 {
-    color: #0f4c81;
+    color: #073b4c;
 }
 
 .empty-bookings p {
-    color: #64748b;
+    color: #607d8b;
     margin-bottom: 25px;
 }
 
-/* ==============================
+
+/* =========================================================
    Edit Booking
-   ============================== */
+========================================================= */
 
 .edit-booking-page {
     max-width: 700px;
     margin: 0 auto;
-    padding: 60px 30px;
+    padding: 70px 30px;
 }
 
 .edit-booking-header {
@@ -780,80 +793,72 @@ nav {
 }
 
 .edit-booking-header h1 {
-    color: #0f4c81;
+    color: #073b4c;
     font-size: 44px;
     margin: 10px 0;
 }
 
 .edit-booking-header > p:last-child {
-    color: #64748b;
+    color: #607d8b;
     font-size: 18px;
 }
 
 .edit-booking-form {
     background-color: white;
-
     padding: 35px;
-    border-radius: 20px;
-    border: 1px solid #e0f2fe;
-
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    border-radius: 22px;
+    border: 1px solid #d6eef0;
+    box-shadow: 0 15px 35px rgba(7, 59, 76, 0.09);
 }
 
 .edit-booking-form > label:first-child {
     display: block;
-    color: #0f4c81;
+    color: #073b4c;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .edit-booking-form select {
     width: 100%;
-
     padding: 14px;
-
-    border: 1px solid #bae6fd;
+    border: 1px solid #a7dfe2;
     border-radius: 10px;
-
     background-color: white;
     font-size: 15px;
 }
+
 .edit-addon {
     display: block;
-
-    background-color: #f0f9ff;
-    color: #0f4c81;
-
+    background-color: #eefcfb;
+    color: #073b4c;
     padding: 14px;
     margin-top: 20px;
-
     border-radius: 10px;
     font-weight: bold;
 }
+
 .edit-addon input {
     margin-right: 6px;
+    accent-color: #14b8a6;
 }
 
 .edit-addon span {
-    color: #0284c7;
+    color: #0f766e;
 }
 
 .edit-total {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin: 25px 0;
     padding: 18px;
-
-    background-color: #e0f2fe;
+    background-color: #ccfbf1;
     border-radius: 12px;
-
-    color: #0f4c81;
+    color: #073b4c;
 }
 
 .edit-total strong {
-    color: #0284c7;
+    color: #0f766e;
     font-size: 24px;
 }
 
@@ -863,16 +868,137 @@ nav {
     cursor: pointer;
     font-size: 16px;
 }
+
 .cancel-edit {
     display: block;
     text-align: center;
     margin-top: 18px;
-    color: #64748b;
+    color: #607d8b;
 }
 
-/* ==============================
-   Responsive Design
-   ============================== */
+
+/* =========================================================
+   Help Center
+========================================================= */
+
+.help-page,
+.contact-page {
+    padding: 80px 8%;
+}
+
+.help-header,
+.contact-header {
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.help-header h1,
+.contact-header h1 {
+    color: #073b4c;
+    font-size: 48px;
+    margin: 0 0 15px;
+}
+
+.help-header p,
+.contact-header p {
+    color: #607d8b;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.faq-section {
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.faq-item {
+    border-top: 1px solid #cfe5e8;
+    padding: 25px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: 1px solid #cfe5e8;
+}
+
+.faq-item summary {
+    color: #073b4c;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-item p {
+    max-width: 750px;
+    color: #607d8b;
+    line-height: 1.7;
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   Contact
+========================================================= */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-info,
+.contact-form-section {
+    padding: 35px;
+    background-color: white;
+    border: 1px solid #d6eef0;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(7, 59, 76, 0.06);
+}
+
+.contact-info h2,
+.contact-form-section h2 {
+    color: #073b4c;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-info > p,
+.contact-form-section > p {
+    color: #607d8b;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.contact-detail {
+    margin-top: 25px;
+}
+
+.contact-detail strong {
+    display: block;
+    color: #073b4c;
+    margin-bottom: 6px;
+}
+
+.contact-detail p {
+    color: #607d8b;
+    margin: 0;
+}
+
+.contact-detail a {
+    color: #0f766e;
+    font-weight: bold;
+}
+
+.contact-form-section .btn-primary {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   Responsive
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -882,7 +1008,12 @@ nav {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
 }
+
 
 @media (max-width: 700px) {
 
@@ -901,17 +1032,15 @@ nav {
 
     .about-text {
         border-left: none;
-        border-top: 3px solid #e0f2fe;
-
+        border-top: 3px solid #ccfbf1;
         padding-left: 0;
         padding-top: 30px;
     }
 
 }
 
-@media (max-width: 600px) {
 
-    /* Navigation */
+@media (max-width: 600px) {
 
     nav {
         padding: 12px 20px;
@@ -924,9 +1053,7 @@ nav {
     .nav-links {
         position: static;
         transform: none;
-
         margin-left: auto;
-
         gap: 15px;
         flex-wrap: wrap;
         justify-content: flex-end;
@@ -936,10 +1063,8 @@ nav {
         font-size: 14px;
     }
 
-    /* Hero */
-
     .hero {
-        padding: 50px 20px;
+        padding: 55px 20px 0;
     }
 
     .hero-title {
@@ -952,13 +1077,13 @@ nav {
 
     .hero-image-wrapper {
         margin-top: 35px;
-    }
-
-    .hero-image-wrapper img {
         height: 300px;
+        border-radius: 18px 18px 0 0;
     }
 
-    /* About */
+    .hero-wave {
+        height: 60px;
+    }
 
     .about-text h3 {
         font-size: 26px;
@@ -967,8 +1092,6 @@ nav {
     .about-text p {
         font-size: 16px;
     }
-
-    /* Why Blue Wave */
 
     .why-section {
         padding: 70px 20px;
@@ -983,17 +1106,20 @@ nav {
         gap: 20px;
         padding: 28px 0;
     }
+
     .feature-info h3 {
         font-size: 23px;
     }
 
-    /* Lessons */
-
-    .lessons-page {
-        padding: 40px 20px;
+    .lessons-page,
+    .bookings-page,
+    .edit-booking-page {
+        padding: 45px 20px;
     }
 
-    .lessons-header h1 {
+    .lessons-header h1,
+    .bookings-header h1,
+    .edit-booking-header h1 {
         font-size: 36px;
     }
 
@@ -1002,18 +1128,9 @@ nav {
     .booking-info-grid {
         grid-template-columns: 1fr;
     }
+
     .lesson-details {
         grid-template-columns: 1fr 1fr;
-    }
-
-    /* Bookings */
-
-    .bookings-page {
-        padding: 40px 20px;
-    }
-
-    .bookings-header h1 {
-        font-size: 36px;
     }
 
     .booking-actions {
@@ -1025,21 +1142,9 @@ nav {
         width: 100%;
     }
 
-    /* Edit Booking */
-
-    .edit-booking-page {
-        padding: 40px 20px;
-    }
-
-    .edit-booking-header h1 {
-        font-size: 36px;
-    }
-
     .edit-booking-form {
         padding: 25px;
     }
-
-    /* Authentication */
 
     .auth-card {
         padding: 30px 25px;
@@ -1047,6 +1152,35 @@ nav {
 
     .auth-card h1 {
         font-size: 28px;
+    }
+
+    .help-page,
+    .contact-page {
+        padding: 50px 20px;
+    }
+
+    .help-header h1,
+    .contact-header h1 {
+        font-size: 36px;
+    }
+
+    .help-header p,
+    .contact-header p {
+        font-size: 16px;
+    }
+
+    .faq-item summary {
+        font-size: 18px;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contact-info,
+    .contact-form-section {
+        padding: 25px;
     }
 
 }
