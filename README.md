@@ -94,7 +94,7 @@ Blue Wave is a surfing lesson booking website where visitors can browse availabl
 | GET | /auth/sign-out | Log out |
 
 ## Features
-
+toast
 ## Future Enhancements
 
 ## Credits

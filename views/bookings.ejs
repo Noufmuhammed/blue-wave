@@ -13,14 +13,19 @@
 
 <body>
 
-    <!-- Navigation bar -->
+   
     <%- include('./partials/navbar.ejs') %>
+    <% if (toast) { %>
+  <div class="toast">
+    ✅ <%= toast %>
+  </div>
+   <% } %>
 
 
-    <!-- My Bookings page -->
+   
     <main class="bookings-page">
 
-        <!-- Page heading -->
+       
         <section class="bookings-header">
 
             <p class="hero-subtitle">
@@ -38,7 +43,7 @@
         </section>
 
 
-        <!-- No bookings message -->
+        
         <% if (bookings.length === 0) { %>
 
             <section class="empty-bookings">
@@ -60,20 +65,20 @@
         <% } %>
 
 
-        <!-- Booking cards -->
+        
         <section class="bookings-grid">
 
             <% bookings.forEach(booking => { %>
 
-                <article class="booking-card">
+             <article class="booking-card">
 
-                    <!-- Lesson title -->
+                   
                     <h2>
                         <%= booking.lesson.level %> Lesson
                     </h2>
 
 
-                    <!-- Booking details -->
+                   
                     <div class="booking-details">
 
                         <p>
@@ -99,14 +104,14 @@
                     </div>
 
 
-                    <!-- Lesson price -->
+                    
                     <p class="booking-price">
                         Lesson Price:
                         <%= booking.lesson.price %> BHD
                     </p>
 
 
-                    <!-- Water Awareness -->
+                   
                     <% if (booking.waterAwareness) { %>
 
                         <p class="booking-addon">
@@ -134,7 +139,7 @@
                     <% } %>
 
 
-                    <!-- Booking actions -->
+                    
                     <div class="booking-actions">
 
                         <a

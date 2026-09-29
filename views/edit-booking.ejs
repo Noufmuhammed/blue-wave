@@ -13,14 +13,14 @@
 
 <body>
 
-    <!-- Navigation bar -->
+  
     <%- include('./partials/navbar.ejs') %>
 
 
-    <!-- Edit booking page -->
+    
     <main class="edit-booking-page">
 
-        <!-- Page heading -->
+       
         <section class="edit-booking-header">
 
             <p class="hero-subtitle">
@@ -38,14 +38,14 @@
         </section>
 
 
-        <!-- Edit form -->
+        
         <form
             action="/bookings/<%= booking._id %>"
             method="POST"
             class="edit-booking-form"
         >
 
-            <!-- Choose lesson -->
+            
             <label for="lessonId">
                 Choose a different lesson
             </label>
@@ -72,7 +72,7 @@
             </select>
 
 
-            <!-- Water Awareness Class -->
+           
             <label class="edit-addon">
 
                 <input
@@ -92,7 +92,7 @@
             </label>
 
 
-            <!-- Total price -->
+           
             <div class="edit-total">
 
                 <span>
@@ -109,13 +109,12 @@
             </div>
 
 
-            <!-- Save changes -->
+           
             <button type="submit" class="btn-primary">
                 Update Booking
             </button>
 
 
-            <!-- Go back -->
             <a href="/bookings" class="cancel-edit">
                 Go Back
             </a>
@@ -125,7 +124,7 @@
     </main>
 
 
-    <!-- Update total price when options change -->
+   
     <script>
 
         // Get the elements we need
@@ -134,34 +133,34 @@
         const totalPrice = document.querySelector("#totalPrice")
 
 
-        // Calculate the total price
+       
         function updateTotal() {
 
-            // Get the selected lesson
+            
             const selectedLesson =
                 lessonSelect.options[lessonSelect.selectedIndex]
 
-            // Get the lesson price
+           
             const lessonPrice =
                 Number(selectedLesson.dataset.price)
 
-            // Add 5 BHD for Water Awareness
+          
             const total =
                 lessonPrice + (waterAwareness.checked ? 5 : 0)
 
-            // Display the total
+            
             totalPrice.textContent = total
         }
 
 
-        // Update price when lesson changes
+       
         lessonSelect.addEventListener(
             "change",
             updateTotal
         )
 
 
-        // Update price when checkbox changes
+        
         waterAwareness.addEventListener(
             "change",
             updateTotal

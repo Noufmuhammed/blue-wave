@@ -1,15 +1,15 @@
-const express = require("express") // imports Express
+const express = require("express") 
 
-const Booking = require("../models/Booking") // imports Booking model
+const Booking = require("../models/Booking") 
 
-const Lesson = require("../models/Lesson") // imports Lesson model
+const Lesson = require("../models/Lesson")
 
-const isLoggedIn = require("../middleware/auth") // checks if user is logged in
+const isLoggedIn = require("../middleware/auth") 
 
-const router = express.Router() // creates the router
+const router = express.Router() 
 
 
-// VIEW MY BOOKINGS
+
 
 router.get("/", isLoggedIn, async (req, res) => {
 
@@ -28,26 +28,21 @@ router.get("/", isLoggedIn, async (req, res) => {
 })
 
 
-// CREATE A BOOKING
 
 router.post("/", isLoggedIn, async (req, res) => {
-
   await Booking.create({
-
     user: req.session.user._id,
-
     lesson: req.body.lessonId,
-
     waterAwareness: req.body.waterAwareness === "true"
-
   })
 
-  res.redirect("/bookings")
+  req.session.toast = "Booking confirmed!"
 
+  res.redirect("/bookings")
 })
 
 
-// SHOW EDIT BOOKING PAGE
+
 
 router.get("/:id/edit", isLoggedIn, async (req, res) => {
 
@@ -72,36 +67,27 @@ router.get("/:id/edit", isLoggedIn, async (req, res) => {
 })
 
 
-// UPDATE A BOOKING
+
 
 router.post("/:id", isLoggedIn, async (req, res) => {
-
   await Booking.findOneAndUpdate(
-
     {
-
       _id: req.params.id,
-
       user: req.session.user._id
-
     },
-
     {
-
       lesson: req.body.lessonId,
-
       waterAwareness: req.body.waterAwareness === "true"
-
     }
-
   )
 
-  res.redirect("/bookings")
+  req.session.toast = "Booking updated successfully!"
 
+  res.redirect("/bookings")
 })
 
 
-// CANCEL A BOOKING
+
 
 router.post("/:id/delete", isLoggedIn, async (req, res) => {
 

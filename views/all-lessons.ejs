@@ -7,19 +7,19 @@
 
     <title>Surfing Lessons - Blue Wave</title>
 
-    <link rel="stylesheet" href="/style.css">
+   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
+    
     <%- include('./partials/navbar.ejs') %>
 
 
-    <!-- Lessons page -->
+    
     <main class="lessons-page">
 
-        <!-- Page heading -->
+       
         <section class="lessons-header">
 
             <p class="hero-subtitle">
@@ -38,14 +38,14 @@
         </section>
 
 
-        <!-- Lesson cards -->
+        
         <section class="lessons-grid">
 
             <% lessons.forEach(lesson => { %>
 
                 <article class="lesson-card">
 
-                    <!-- Lesson level -->
+                    
                     <div class="lesson-level">
                         <span>
                             <%= lesson.level %>
@@ -57,13 +57,13 @@
                     </div>
 
 
-                    <!-- Lesson title -->
+                   
                     <h2>
                         Learn to Ride
                     </h2>
 
 
-                    <!-- Lesson details -->
+                    
                     <div class="lesson-details">
 
                         <div class="lesson-detail">
@@ -120,7 +120,7 @@
                     </div>
 
 
-                    <!-- Price -->
+                    
                     <div class="lesson-price">
 
                         <span>
@@ -134,10 +134,10 @@
                     </div>
 
 
-                    <!-- Booking form -->
+                    
                     <form action="/bookings" method="POST">
 
-                        <!-- Sends the lesson ID -->
+                        
                         <input
                             type="hidden"
                             name="lessonId"
@@ -145,7 +145,7 @@
                         >
 
 
-                        <!-- Water Awareness Class -->
+                        
                         <label class="water-awareness">
 
                             <input
@@ -165,7 +165,7 @@
                         </label>
 
 
-                        <!-- Book button -->
+                        
                         <button type="submit">
                             Book This Lesson
                         </button>

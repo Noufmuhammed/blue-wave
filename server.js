@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true })) // reads form data
 
 // Session
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET, //It's used to secure the session
   resave: false,
   saveUninitialized: false
 }))
@@ -30,8 +30,10 @@ app.use(session({
 
 // Makes the logged-in user available to all EJS pages
 app.use((req, res, next) => {
-
   res.locals.user = req.session.user
+  res.locals.toast = req.session.toast
+
+  delete req.session.toast
 
   next()
 })

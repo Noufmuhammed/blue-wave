@@ -17,16 +17,16 @@
 <body>
 
 
-<!-- Navigation bar -->
+
 <%- include('../partials/navbar.ejs') %>
 
 
-<!-- Sign up page -->
+
 <main class="auth-page">
 
     <section class="auth-card">
 
-        <!-- Heading -->
+       
         <p class="hero-subtitle">
             JOIN BLUE WAVE
         </p>
@@ -40,10 +40,10 @@
         </p>
 
 
-        <!-- Sign up form -->
+        
         <form action="/auth/sign-up" method="POST">
 
-            <!-- Username -->
+            
             <label for="username">
                 Username
             </label>
@@ -57,7 +57,7 @@
             >
 
 
-            <!-- Password -->
+            
             <label for="password">
                 Password
             </label>
@@ -71,7 +71,7 @@
             >
 
 
-            <!-- Confirm password -->
+         
             <label for="confirmPassword">
                 Confirm Password
             </label>
@@ -85,7 +85,7 @@
             >
 
 
-            <!-- Create account button -->
+           
             <button type="submit">
                 Create Account
             </button>
@@ -93,7 +93,7 @@
         </form>
 
 
-        <!-- Login link -->
+       
         <p class="auth-footer">
             Already have an account?
             <a href="/auth/sign-in">
