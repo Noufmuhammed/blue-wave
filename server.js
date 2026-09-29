@@ -1,34 +1,34 @@
-require("dotenv").config() // loads variables from .env
+require("dotenv").config() // loads 
 
-const connectDB = require("./db") // connects to MongoDB
+const connectDB = require("./db") 
 
 const lessonsRouter = require("./routes/lessons") 
 const bookingsRouter = require("./routes/bookings")
 const authRouter = require("./routes/auth") 
 const helpRouter = require("./routes/help")
 const contactRouter = require("./routes/contact")
-connectDB() // connects to MongoDB
+connectDB() 
 
-const express = require("express") // imports Express
-const session = require("express-session") // allows sessions
+const express = require("express") 
+const session = require("express-session")  
 
-const app = express() // creates our Express app
-
-
-// Middleware
-app.use(express.static("public")) // serves CSS and other public files
-app.use(express.urlencoded({ extended: true })) // reads form data
+const app = express() 
 
 
-// Session
+
+app.use(express.static("public"))  
+app.use(express.urlencoded({ extended: true })) 
+
+
+
 app.use(session({
-  secret: process.env.SESSION_SECRET, //It's used to secure the session
+  secret: process.env.SESSION_SECRET,  
   resave: false,
   saveUninitialized: false
 }))
 
 
-// Makes the logged-in user available to all EJS pages
+
 app.use((req, res, next) => {
   res.locals.user = req.session.user
   res.locals.toast = req.session.toast

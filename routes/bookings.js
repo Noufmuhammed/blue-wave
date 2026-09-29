@@ -68,7 +68,6 @@ router.get("/:id/edit", isLoggedIn, async (req, res) => {
 
 
 
-
 router.post("/:id", isLoggedIn, async (req, res) => {
   await Booking.findOneAndUpdate(
     {
