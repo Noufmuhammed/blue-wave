@@ -31,6 +31,7 @@ app.use(session({
 
 app.use((req, res, next) => {
   res.locals.user = req.session.user
+  
   res.locals.toast = req.session.toast
 
   delete req.session.toast
